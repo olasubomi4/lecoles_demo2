@@ -1,0 +1,83 @@
+@model lecolesAI.Models.courses
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>courses</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="course_id" class="control-label"></label>
+                <input asp-for="course_id" class="form-control" />
+                <span asp-validation-for="course_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="course_title" class="control-label"></label>
+                <input asp-for="course_title" class="form-control" />
+                <span asp-validation-for="course_title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="url" class="control-label"></label>
+                <input asp-for="url" class="form-control" />
+                <span asp-validation-for="url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="price" class="control-label"></label>
+                <input asp-for="price" class="form-control" />
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="num_subscribers" class="control-label"></label>
+                <input asp-for="num_subscribers" class="form-control" />
+                <span asp-validation-for="num_subscribers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="num_reviews" class="control-label"></label>
+                <input asp-for="num_reviews" class="form-control" />
+                <span asp-validation-for="num_reviews" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="num_lectures" class="control-label"></label>
+                <input asp-for="num_lectures" class="form-control" />
+                <span asp-validation-for="num_lectures" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="level" class="control-label"></label>
+                <input asp-for="level" class="form-control" />
+                <span asp-validation-for="level" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="content_duration" class="control-label"></label>
+                <input asp-for="content_duration" class="form-control" />
+                <span asp-validation-for="content_duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="published_timestamp" class="control-label"></label>
+                <input asp-for="published_timestamp" class="form-control" />
+                <span asp-validation-for="published_timestamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="subject" class="control-label"></label>
+                <input asp-for="subject" class="form-control" />
+                <span asp-validation-for="subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

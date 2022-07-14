@@ -1,0 +1,39 @@
+@model  lecolesAI.Models.viewModel
+
+@{
+    ViewData["Title"] = "Similar Courses";
+}
+<br />
+<h1>Since you like @ViewBag.find you should consider these courses: </h1>
+
+<br />
+
+@{ 
+    try
+    {
+@foreach (var items in (IEnumerable<lecolesAI.Models.viewModel>)ViewBag.recommended)
+    {
+
+   <a href="@items.url"> <h3> @items.course_title</h3></a> <h6>$@items.price</h6>
+
+
+ <br />
+
+    }
+    }
+
+
+
+    catch (Exception e) {
+
+     <h2 style="color:red"> Try another course</h2>
+        }
+    }
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

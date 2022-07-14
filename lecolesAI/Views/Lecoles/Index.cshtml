@@ -1,0 +1,56 @@
+@model IEnumerable<lecolesAI.Models.courses>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<table id="tblData" class="table">
+    <thead>
+        <tr>
+           
+            <th>
+              Course Title
+            </th>
+         
+            <th>
+               Course Price
+            </th>
+            
+          
+            <th>
+              Course Subject
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@{/*@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.course_title)
+            </td>
+          
+            <td>
+              $@Html.DisplayFor(modelItem => item.price)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.subject)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.index">See Similar Course</a>
+              
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+   */ }
+@section Scripts{ 
+
+    <script src="~/js/course.js"></script>
+}
