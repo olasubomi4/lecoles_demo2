@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'lecoles21'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5BD09E52B8204733A1634FE7C8F036A9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1D92A6451F1D487CA01E4140CDBE5F6F }}
           package: .
